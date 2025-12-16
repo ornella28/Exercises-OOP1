@@ -31,6 +31,12 @@ public class Main {
        Customer john = new Customer(1, "John Doe", "johndoe@gmail.com", java.time.LocalDate.of(1990, 5, 15));// calling the constructor to create a new Customer object
          System.out.println(john.toString());//Printing the customer information using the overridden toString method
 
+         Student student = new Student(1, "Alice Johnson", 20, "Computer Science");// calling the constructor to create a new Student object
+         System.out.println(student.toString());
+
+         Student alicia = new Student(2, "Alicia Keys", 22, "Music");// calling the constructor to create a new Student object
+            System.out.println(alicia.toString());
+
 
 
 
