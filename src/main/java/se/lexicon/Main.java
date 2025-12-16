@@ -19,6 +19,11 @@ public class Main {
          bankAccount.withdraw(1000);//Withdrawing an amount from the balance field
          System.out.println(bankAccount.getAccountInfo());//Calling the method that returns the account information
 
+         bankAccount.setAccountHolder("Jane Smith");//Updating the account holder name using the setter method
+         bankAccount.setAddress("456 Oak St, Othertown, USA");//Updating the address using the setter method
+         bankAccount.setPhoneNumber("0733344556");//Updating the phone number using the setter method
+         System.out.println(bankAccount.getAccountInfo());//Calling the method that returns the account information after updates
+
          System.out.println("The balance is: " + bankAccount.getBalance());//Getting the current balance using the getter method
 
 
