@@ -43,6 +43,23 @@ public class Main {
             Product phone = new Product(2, "Smartphone", 699.99, 20);// calling the constructor to create a new Product object
             System.out.println(phone.toString());
 
+            //Create products
+            Product laptop = new Product(1, "Laptop", 999.99, 8);
+            Product smartphone = new Product(2, "Smartphone", 699.99, 15);
+
+            //Create first order
+            Order order1 = new Order(1, "john", new java.util.ArrayList<>(), java.time.LocalDateTime.now());
+            order1.addProduct(laptop);
+
+            //Create second order
+            Order order2 = new Order(2, "alice", new java.util.ArrayList<>(), java.time.LocalDateTime.now());
+            order2.addProduct(smartphone);
+
+         System.out.println("Order" + order1.getOrderId() + " placed by " + order1.getCustomerName() + " on " + order1.getOrderDate());
+         System.out.println("Order" + order2.getOrderId() + " placed by " + order2.getCustomerName() + " on " + order2.getOrderDate());
+
+
+
 
 
 
