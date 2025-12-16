@@ -37,6 +37,12 @@ public class Main {
          Student alicia = new Student(2, "Alicia Keys", 22, "Music");// calling the constructor to create a new Student object
             System.out.println(alicia.toString());
 
+            Product product = new Product(1, "Laptop", 999.99, 10);// calling the constructor to create a new Product object
+            System.out.println(product.toString());
+
+            Product phone = new Product(2, "Smartphone", 699.99, 20);// calling the constructor to create a new Product object
+            System.out.println(phone.toString());
+
 
 
 
