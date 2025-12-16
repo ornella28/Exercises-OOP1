@@ -10,6 +10,8 @@ public class Main {
         bankAccount.setAddress("123 Main St, Anytown, USA");//Setting the address
         bankAccount.setPhoneNumber("0720256233");//Setting the phone number*/
 
+         //BankAccount bankAccount2 = new BankAccount("Jane Smith", "456 Oak St, Othertown, USA", "0733344556");
+
          bankAccount.deposit(5000);//Depositing an amount to the balance field
          System.out.println(bankAccount.getAccountInfo());
 
