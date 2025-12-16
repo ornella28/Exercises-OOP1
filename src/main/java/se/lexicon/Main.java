@@ -16,8 +16,12 @@ public class Main {
          bankAccount.deposit(1500);//Depositing another amount to the balance field
          System.out.println(bankAccount.getAccountInfo());//Calling the method that returns the account information
 
-            bankAccount.withdraw(1000);//Withdrawing an amount from the balance field
-            System.out.println(bankAccount.getAccountInfo());//Calling the method that returns the account information
+         bankAccount.withdraw(1000);//Withdrawing an amount from the balance field
+         System.out.println(bankAccount.getAccountInfo());//Calling the method that returns the account information
+
+         System.out.println("The balance is: " + bankAccount.getBalance());//Getting the current balance using the getter method
+
+
 
 
 

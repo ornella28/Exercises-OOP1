@@ -10,10 +10,21 @@ public class BankAccount {
     private String accountType;
 
 
+    public String generateAccountType(){
+        if (balance < 1000){
+            return  "Basic";
+        } else if (balance >= 1000 && balance < 5000){
+            return  "Silver";
+        } else {
+            return  "Gold";
+        }
+    }
+
+
 //Creating a method responsible for returning the account information
 
     public String getAccountInfo(){
-        return "Account holder: " + accountHolder + ", Balance: " + balance + ", Address: " + address + ", Phone Number: " + phoneNumber + ", Account Type: " + accountType;
+        return "Account holder: " + accountHolder + ", Balance: " + balance + ", Address: " + address + ", Phone Number: " + phoneNumber + ", Account Type: " + generateAccountType();
     }
 
 
@@ -58,4 +69,12 @@ public class BankAccount {
         }
         this.phoneNumber = phoneNumber;
     }
-}
+
+
+    //Generating getters for balance
+
+    public double getBalance() {
+        return balance;
+    }
+    }
+
