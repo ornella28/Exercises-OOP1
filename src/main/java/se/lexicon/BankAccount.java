@@ -6,7 +6,7 @@ public class BankAccount {
     private String accountHolder;
     private double balance;
     private String address;
-    private double phoneNumber;
+    private String phoneNumber;
     private String accountType;
 
 
@@ -14,6 +14,26 @@ public class BankAccount {
 
     public String getAccountInfo(){
         return "Account holder: " + accountHolder + ", Balance: " + balance + ", Address: " + address + ", Phone Number: " + phoneNumber + ", Account Type: " + accountType;
+    }
+
+
+    //Creating method deposit and withdraw to update the balance field
+
+    public void deposit(double amount){
+        if (amount > 0){
+            this.balance += amount;
+        } else {
+            throw new IllegalArgumentException("Deposit amount must be positive");
+        }
+
+    }
+
+    public void withdraw(double amount){
+        if (amount > 0 && amount <= balance){
+            this.balance -= amount;
+        } else {
+            throw new IllegalArgumentException("Withdraw amount must be positive and less than or equal to the balance");
+        }
     }
 
     //Generating setters for accountHolder, address and phoneNumber to update the values of the private fields
@@ -26,10 +46,16 @@ public class BankAccount {
     }
 
     public void setAddress(String address) {
+        if (address==null || address.trim().isEmpty()){
+            throw new IllegalArgumentException("Address cannot be null or empty");
+        }
         this.address = address;
     }
 
-    public void setPhoneNumber(double phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
+        if (phoneNumber==null || phoneNumber.trim().isEmpty()){
+            throw new IllegalArgumentException("Phone number must be positive");
+        }
         this.phoneNumber = phoneNumber;
     }
 }
