@@ -10,6 +10,17 @@ public class BankAccount {
     private String accountType;
 
 
+    //Creating constructor to initialize the fields
+
+    public BankAccount(String accountHolder, String address, String phoneNumber){
+        this.accountHolder = accountHolder;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.balance = 0;
+
+    }
+
+
     public String generateAccountType(){
         if (balance < 1000){
             return  "Basic";
