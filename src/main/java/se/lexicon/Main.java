@@ -26,6 +26,11 @@ public class Main {
 
          System.out.println("The balance is: " + bankAccount.getBalance());//Getting the current balance using the getter method
 
+       Customer john = new Customer(1, "John Doe", "johndoe@gmail.com", java.time.LocalDate.of(1990, 5, 15));// calling the constructor to create a new Customer object
+         System.out.println(john.toString());//Printing the customer information using the overridden toString method
+
+
+
 
 
 
